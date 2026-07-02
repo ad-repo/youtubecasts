@@ -30,16 +30,19 @@ android {
 
     try {
         def propertiesFile = rootProject.file("keystore.properties")
-        if(propertiesFile.text != ""){
+        if (propertiesFile.exists() && propertiesFile.text.trim() != "") {
             properties.load(new FileInputStream(propertiesFile))
-
-            properties.load(new FileInputStream(propertiesFile))
-            signingConfigs {
-                debug {
-                    storeFile file(properties["signingConfig.storeFile"])
-                    storePassword properties["signingConfig.storePassword"]
-                    keyAlias properties["signingConfig.keyAlias"]
-                    keyPassword properties["signingConfig.keyPassword"]
+            // Only override the default debug signing config when a real keystore
+            // is configured. Without it (e.g. CI with no secrets), fall back to
+            // the Android Gradle Plugin's auto-generated debug signing config.
+            if (properties["signingConfig.storeFile"]) {
+                signingConfigs {
+                    debug {
+                        storeFile file(properties["signingConfig.storeFile"])
+                        storePassword properties["signingConfig.storePassword"]
+                        keyAlias properties["signingConfig.keyAlias"]
+                        keyPassword properties["signingConfig.keyPassword"]
+                    }
                 }
             }
         }
