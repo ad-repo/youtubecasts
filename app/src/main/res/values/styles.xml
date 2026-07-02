@@ -1,0 +1,138 @@
+<resources>
+    <style name="Theme.BottomSheet" parent="BaseTheme">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="preferenceTheme">@style/PreferenceTheme</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:background">@color/light_grey</item>
+    </style>
+
+    <style name="CrispLightMakeover">
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:colorBackground">@color/crisp_light_background</item>
+        <item name="colorAccent">@color/crisp_active_blue</item>
+        <item name="colorControlNormal">@color/crisp_on_surface_variant</item>
+        <item name="colorPrimary">@color/crisp_primary</item>
+        <item name="colorOnPrimary">@color/crisp_on_primary</item>
+        <item name="colorPrimaryContainer">@color/crisp_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/crisp_on_primary_container</item>
+        <item name="colorSecondary">@color/crisp_secondary</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/crisp_secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/crisp_on_secondary_container</item>
+        <item name="colorTertiary">@color/crisp_tertiary</item>
+        <item name="colorOnTertiary">@color/white</item>
+        <item name="colorTertiaryContainer">@color/crisp_tertiary_container</item>
+        <item name="colorOnTertiaryContainer">@color/crisp_on_tertiary_container</item>
+        <item name="colorError">@color/crisp_error_coral</item>
+        <item name="colorErrorContainer">#FFE1DF</item>
+        <item name="colorOnError">@color/white</item>
+        <item name="colorOnErrorContainer">#641817</item>
+        <item name="colorSurface">@color/crisp_card_surface</item>
+        <item name="colorOnSurface">@color/crisp_on_surface</item>
+        <item name="colorSurfaceVariant">@color/crisp_surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/crisp_on_surface_variant</item>
+        <item name="colorOutline">@color/crisp_card_stroke</item>
+        <item name="colorOnBackground">@color/crisp_on_surface</item>
+        <item name="colorSurfaceInverse">#2C3038</item>
+        <item name="colorOnSurfaceInverse">#F1F4FB</item>
+        <item name="colorPrimaryInverse">#A9CBFF</item>
+        <item name="colorSurfaceContainerLowest">@color/white</item>
+        <item name="colorSurfaceContainerLow">@color/crisp_light_background</item>
+        <item name="colorSurfaceContainer">@color/crisp_card_surface</item>
+        <item name="colorSurfaceContainerHigh">@color/crisp_surface_variant</item>
+        <item name="colorSurfaceContainerHighest">#DDE7F6</item>
+    </style>
+
+    <style name="CrispNavigationActiveIndicator">
+        <item name="android:color">@color/crisp_primary_container</item>
+        <item name="shapeAppearance">@style/ShapeAppearanceOverlay.Chip.Rounded</item>
+    </style>
+
+    <style name="Divider.Horizontal" parent="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item> // You can change thickness here.
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="Divider.Vertical" parent="Divider">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_marginEnd">5dp</item>
+        <item name="android:layout_marginStart">5dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.Avatar" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">5dp</item>
+    </style>
+
+    <style name="CircleImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.Avatar2" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">7dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.CrispCard" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.CrispThumbnail" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.RightCorner" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeBottomRight">10dp</item>
+        <item name="backgroundTint">#80000000</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.Chip.Rounded" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">12dp</item>
+        <item name="cornerSizeTopRight">12dp</item>
+        <item name="cornerSizeBottomLeft">12dp</item>
+        <item name="cornerSizeBottomRight">12dp</item>
+    </style>
+
+    <style name="Preference.SwitchPreferenceCompat.Material3" parent="@style/Preference.SwitchPreferenceCompat.Material">
+        <item name="widgetLayout">@layout/preferece_material_switch</item>
+    </style>
+
+    <style name="snackBarStyle" parent="@style/Widget.Material3.Snackbar">
+        <item name="shapeAppearance">@style/ShapeAppearance.Material3.Corner.ExtraLarge</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="maxLines">2</item>
+        <item name="animationMode">slide</item>
+    </style>
+
+    <style name="FullScreenDialogTheme" parent="MaterialAlertDialog.Material3">
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="PreferenceTheme" parent="PreferenceThemeOverlay">
+        <item name="singleLineTitle">false</item>
+    </style>
+
+    <style name="MyZeroSizeTextAppearance">
+        <item name="android:textSize">0sp</item>
+    </style>
+
+</resources>
